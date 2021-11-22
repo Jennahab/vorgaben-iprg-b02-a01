@@ -7,7 +7,6 @@ int MAX_VALUE = 100;
  
 
 void count_sort_calculate_counts(int input_array[], int len, int count_array[]) {
-    //count_array[MAX_VALUE];
     
     	for (int j = 0; j <= MAX_VALUE; j++){
     		count_array[j] = 0;
