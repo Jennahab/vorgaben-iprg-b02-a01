@@ -7,7 +7,7 @@ int MAX_VALUE = 100;
  
 
 void count_sort_calculate_counts(int input_array[], int len, int count_array[]) {
-    count_array[MAX_VALUE];
+    //count_array[MAX_VALUE];
     
     	for (int j = 0; j <= MAX_VALUE; j++){
     		count_array[j] = 0;
@@ -22,17 +22,15 @@ void count_sort_calculate_counts(int input_array[], int len, int count_array[]) 
 void count_sort_write_output_array(int output_array[], int len, int count_array[]) {
 
     int k, j, i; 
-    k = 1; 
+    k = 0; 
 
-        for (j = 1; j < MAX_VALUE; j++){
+        for (j = 0; j <= MAX_VALUE; j++){
             for (i = 1; i < count_array[j]; i++){
                 output_array[k] = j;
                 k = k + 1;
             }
         }
 }
-
-
 
 int main(int argc, char *argv[]) {
 
@@ -50,11 +48,11 @@ int main(int argc, char *argv[]) {
     printf("Unsortiertes Array:");
     print_array(input_array, len);
 
-    // Deklarationen und Funktionsaufrufe für Countsort
-    /* void countsort(input_array, output_array){
-      count_sort_calculate_counts(input_array, len, count_array);
-      count_sort_write_output_array(output_array, len, count_array);
-    } */
+    int output_array[MAX_LAENGE];
+    int count_array[MAX_VALUE];
+
+    count_sort_calculate_counts(input_array, len, count_array);
+    count_sort_write_output_array(output_array, len, count_array);
 
     printf("Sortiertes Array:");
 
